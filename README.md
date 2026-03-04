@@ -1,22 +1,19 @@
 # Student Records Data Warehouse (DW-Student)
 
-## Project Overview
-Designed and implemented a relational Data Warehouse (DW) in **Microsoft SQL Server** to manage academic records. The project uses dimensional modeling to enable efficient tracking of student success, module performance, and course statistics.
+## Overview
+A data warehouse built in Microsoft SQL Server to track academic records - student performance, module results, and course statistics. The goal was to make that data easy to query and actually useful for analysis.
 
-## Data Model (Snowflake Schema)
-The database is structured as a **Snowflake Schema**. This model further normalizes dimensions to reduce data redundancy and improve organizational structure:
-* **Central Fact Table:** * `UspehFact` – Stores core metrics such as exam attempts, success rates, and average grades.
-* **Normalized Dimensions (Snowflaking):** * `StudentDIM` – Acts as the primary dimension connected to the fact table.
-    * **Sub-dimensions:** It further branches out into `RegionDim`, `ModulDim`, and `StatusDim` to reduce redundancy.
-* **Direct Dimensions:** * `PredmetDim` – Contains course details like ESPB and semester.
-    * `VremeDim` – Stores temporal data, including academic years and exam periods.
+## Data Model
+The schema follows a snowflake structure, which meant normalizing the dimensions further than a standard star schema to cut down on redundancy.
 
----
-## Technologies Used
-* **Database Engine:** Microsoft SQL Server
-* **Management Tool:** SQL Server Management Studio (SSMS)
----
+The central fact table is `UspehFact`, which holds the core numbers: exam attempts, pass rates, and average grades. Off of that sits `StudentDIM` as the main dimension, which branches into three sub-dimensions - `RegionDim`, `ModulDim`, and `StatusDim`. The two direct dimensions are `PredmetDim` (course info like ESPB credits and semester) and `VremeDim` (academic years and exam periods).
+
+
+## Technologies
+* Microsoft SQL Server
+* SQL Server Management Studio (SSMS)
+  
 ## Database Diagram
-
 ![Database Schema](schema-diagram.png)
+
 
