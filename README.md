@@ -5,12 +5,11 @@ Designed and implemented a relational Data Warehouse (DW) in **Microsoft SQL Ser
 
 ## Data Model (Snowflake Schema)
 The database is structured as a **Snowflake Schema**. This model further normalizes dimensions to reduce data redundancy and improve organizational structure:
-
-**Central Fact Table:** `UspehFact` - Stores core metrics such as exam attempts, success rates, and average grades.
-**Normalized Dimensions (Snowflaking):** * `StudentDIM` acts as a primary dimension connected to the fact table.
-    * It further branches out into sub-dimensions: `RegionDim`, `ModulDim`, and `StatusDim`.
-**Direct Dimensions:** `PredmetDim` - Course details like ESPB and semester.
-    * `VremeDim` - Temporal data for exam periods.
+* **Central Fact Table:** * `UspehFact` – Stores core metrics such as exam attempts, success rates, and average grades.
+* **Normalized Dimensions (Snowflaking):** * `StudentDIM` – Acts as the primary dimension connected to the fact table.
+    * **Sub-dimensions:** It further branches out into `RegionDim`, `ModulDim`, and `StatusDim` to reduce redundancy.
+* **Direct Dimensions:** * `PredmetDim` – Contains course details like ESPB and semester.
+    * `VremeDim` – Stores temporal data, including academic years and exam periods.
 
 ---
 ## Technologies Used
@@ -21,4 +20,5 @@ The database is structured as a **Snowflake Schema**. This model further normali
 
 ---
 ## Database Diagram
+
 ![Database Schema](schema-diagram.png)
