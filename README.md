@@ -15,10 +15,8 @@ The database is structured as a **Snowflake Schema**. This model further normali
 ## Technologies Used
 * **Database Engine:** Microsoft SQL Server
 * **Management Tool:** SQL Server Management Studio (SSMS)
-* **Language:** T-SQL
-* **Modeling:** Snowflake Schema / Dimensional Modeling
-
 ---
 ## Database Diagram
 
 ![Database Schema](schema-diagram.png)
+
